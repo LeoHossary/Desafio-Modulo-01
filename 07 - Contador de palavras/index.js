@@ -1,10 +1,17 @@
-const inputTexto = "Cuidado, pois usuarios as vezes deixam espacos vazios no fim do texto sem querer "
+const texto = ' !!!!!!!!!!! Cuidado,  , pois usuarios as vezes. deixam espacos vazios? no fim do texto sem querer ';
 
-const novo = inputTexto.split(' ');
+let textoFormatado = texto.replaceAll('!', '');
+textoFormatado = textoFormatado.replaceAll('.', '');
+textoFormatado = textoFormatado.replaceAll(',', '');
+textoFormatado = textoFormatado.replaceAll('?', '');
 
-    while (novo.indexOf('') !== -1) {
-    let index = novo.indexOf('')
-    novo.splice(index, 1)
-}
-    
-novo.trim().length === novo.length ? console.log(novo.length) : console.log(novo.length - 1)
+const arrayTexto = textoFormatado.trim().split(" ");
+
+let contador = 0;
+
+for (let palavra of arrayTexto) {
+    if (palavra !== '') {
+        contador++;
+    }
+};
+console.log(contador);

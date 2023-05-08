@@ -1,7 +1,7 @@
-const input = [1, 543, 567, 7856, 32, 54]
+const lista = [1, 2, 3, 4, 5, 6];
 
-const resultado = input.reduce((acc, cur) => { // acc = accumulator && cur = currency
-    return acc + cur
-})
- 
-  console.log(resultado);
+const somatorio = lista.reduce((soma, valorAtual) => {
+    return soma + valorAtual;
+});
+
+console.log(somatorio);

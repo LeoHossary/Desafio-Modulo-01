@@ -1,7 +1,18 @@
-const inputNumeros = [1, 3, 2, 1]
+const numeros = [1, 3, 2, 1];
 
-const soma = inputNumeros.reduce((acc, cur) => {
-    return acc + cur
-})
+let posicao = 0;
+let contador = 1;
 
-soma % inputNumeros.length === 0 ? console.log(inputNumeros.length) : console.log(soma % inputNumeros.length)
+const soma = numeros.reduce((acumulador, valorAtual) => {
+    return acumulador + valorAtual;
+});
+
+while (contador <= soma) {
+    contador++;
+    if (posicao === numeros.length) {
+        posicao = 1;
+    } else {
+        posicao++;
+    }
+};
+console.log(posicao);

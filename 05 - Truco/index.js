@@ -1,10 +1,8 @@
-const inputCarta = 3
+const carta = 'Q';
 
-const opcoes = ["Q", "J", "K", "A", "2", "3"]
+const cartaParaCima = ['Q', 'J', 'K', 'A', '2', '3'];
+const manilhas = ['J', 'K', 'A', '2', '3', 'Q'];
 
-const resultado = opcoes.indexOf(inputCarta.toString().trim())
-if (resultado !== 5) {
-console.log(opcoes[resultado+1])
-} else {
-    console.log(opcoes[0])
-}
+let indice = cartaParaCima.indexOf(carta);
+
+console.log(manilhas[indice]);

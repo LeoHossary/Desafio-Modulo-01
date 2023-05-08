@@ -1,8 +1,17 @@
-const inputPrecos = [200, 150, 50, 100]
+const precos = [150, 50];
 
-const resultado = inputPrecos.reduce((acc, cur) => {
-    return acc + cur
-})
-let menorValor = Math.min(...inputPrecos) / 2
-
-inputPrecos.length >= 3 ? console.log(resultado - menorValor) : console.log(resultado)
+function totalAPagar(lista) {
+    lista.sort((primeiro, segundo) => {
+        return primeiro - segundo;
+    });
+    const soma = lista.reduce((acumulador, valorAtual) => {
+        return acumulador + valorAtual
+    });
+    if (lista.length >= 3) {
+        const menorValor = lista[0];
+        console.log(soma - menorValor/2);
+    } else {
+        console.log(soma);
+    }
+};
+totalAPagar(precos);

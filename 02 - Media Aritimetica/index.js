@@ -1,6 +1,9 @@
-const input = [2, 3, 4]
+const lista = [1, 2, 3, 4, 5, 6];
 
-const resultado = input.reduce((acc, cur) => {
-    return acc + cur
-})
-console.log(resultado / input.length)
+const somatorio = lista.reduce((soma, valorAtual) => {
+    return soma + valorAtual;
+});
+
+const media = somatorio / lista.length;
+
+console.log(media);

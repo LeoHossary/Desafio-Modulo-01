@@ -1,8 +1,15 @@
-const inputNumero = 10
-const inputLimiteInferior = 5
-const inputLimiteSuperior = 15
+const numero = 10;
+const limiteInferior = 5;
+const limiteSuperior = 20;
 
-function provaReal (numero, limiteInferior, limiteSuperior) {
-    return numero >= limiteInferior && numero <= limiteSuperior
-}
-provaReal(inputNumero, inputLimiteInferior, inputLimiteSuperior) ? console.log("PERTENCE") : console.log("NAO PERTENCE")
+function numeroConsta(numero, limiteInferior, limiteSuperior) {
+      
+    if (numero >= limiteInferior && numero <= limiteSuperior) {
+        console.log('PERTENCE');
+    } else {
+        console.log('NAO PERTENCE');
+    }
+
+};
+
+numeroConsta(numero, limiteInferior, limiteSuperior);

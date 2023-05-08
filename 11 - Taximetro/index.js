@@ -1,16 +1,14 @@
-const inputMIN = 25
-const inputKM = 11.5
+const min = 25;
+const km = 11.5;
 
-let valor = 0
+//inicialmente são 50 cents por min e 70 cents por km
+//depois de 10km, cada km custa 50 cents
+//depois de 20min, cada min custa 30 cents.
 
-if (inputKM <= 10) {
-    valor += (inputKM * 70)
-} else {
-    valor += (10 * 70) + ((inputKM - 10) * 50)
-}
-if (inputMIN <= 20) {
-    valor += (inputMIN * 50)
-} else {
-    valor += (20 * 50) + ((inputMIN - 20) * 30)
-}
-console.log(valor)
+const valorDistancia = (km > 10) ? ((70 * 10) + (km - 10) * 50) : (km * 70);
+
+const valorTempo = (min > 20) ? ((50 * 20) + (min - 20) * 30) : (min * 50);
+
+const valorTotal = valorDistancia + valorTempo;
+
+console.log(valorTotal);

@@ -1,10 +1,13 @@
-const inputValores = [1, 2, 3, 4, 5, 6, 7, 8, 9]
-const inputMin = 2
-const inputMax = 6
+const min = 2;
+const max = 10;
+const valores = [0, 5, 6, 10, 11];
 
-const resultado = inputValores.filter((numeros) => {
-    return numeros >= inputMin && numeros <= inputMax
-    
-    })
-    
-    console.log(resultado)
+let permitidos = [];
+
+for (let valor of valores) {
+    if (valor >= min && valor <= max) {
+        permitidos.push(valor);
+    } 
+};
+
+console.log(permitidos);
